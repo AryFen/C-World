@@ -1,0 +1,21 @@
+Hello World!
+Hi World!
+Greetings World!
+Bye World!
+Goodbye World!
+Good Morning World!
+
+if ((file = fopen(optarg, "r")))
+{
+  char line[128];
+
+  while (fgets(line, sizeof(line), file))
+  {
+    count++;
+    if (count == num + 1)
+    {
+      exit(1);
+    }
+    printf("%d: %s", count, line);
+  }
+}
